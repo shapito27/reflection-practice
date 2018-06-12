@@ -63,6 +63,16 @@ function getClassTypeInfo(ReflectionClass $class)
     if ($class->isTrait()) {
         $info .= " - is trait\n";
     }
+
+    /**
+     * check if interface class
+     */
+    if ($class->isInstantiable()) {
+        $info .= " - can create instance\n";
+    }else{
+        $info .= " - can't create instance\n";
+    }
+
     $info .= "\n";
 
     return $info;
