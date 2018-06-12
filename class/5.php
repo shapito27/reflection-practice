@@ -8,42 +8,55 @@
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 /**
- * Get source code of Class's methods
+ * Get info about method's params
  */
 
 /**
- * @param ReflectionMethod $method
+ * @param ReflectionParameter $arg
  * @return string
  */
-function getClassMethodsCode(ReflectionMethod $method): string
+function getMethodsParams(ReflectionParameter $arg): string
 {
-    /** @var string $methodFileName getting file path */
-    $methodFileName = $method->getFileName();
+    $paramName = $arg->getName();
+    $info = "$$paramName param ";
+    $paramMethodInClass = $arg->getDeclaringClass();
+    $paramInMethod = $arg->getDeclaringFunction();
+    $paramPosition = $arg->getPosition();
+    $info .= "on " . $paramPosition . " position in method {$paramInMethod->getName()} of class {$paramMethodInClass->getName()} ";
+    $paramTypeClass = $arg->getClass();
+    if(!empty($paramTypeClass)){
+        $info .= "$$paramName have to be instance of " . $paramTypeClass . "\n";
+    }else{
+        $info .= "$$paramName type is " . $arg->getType() . "\n";
+    }
+    if($arg->isPassedByReference()){
+        $info .= "$$paramName passed by reference " . "\n";
+    }
+    if($arg->isDefaultValueAvailable()){
+        $defValue = $arg->getDefaultValue();
+        $info .= "$$paramName by default equal " . $defValue . "\n";
+    }
 
-    $startCodeLine = $method->getStartLine();
-    $endCodeLine = $method->getEndLine();
-
-    /** @var array $lines lines of source code */
-    $lines = file($methodFileName);
-
-    return implode("", array_slice($lines, $startCodeLine - 1, $endCodeLine - $startCodeLine + 1));
+    return $info;
 }
 
-/**
- * get method PHPDoc comments
- * @param ReflectionMethod $method
- * @return string
- */
-function getClassMethodDocComment(ReflectionMethod $method): string
-{
-    return $method->getDocComment();
+
+//getting class
+$class = new ReflectionClass('Local\\Utils');
+//getting method
+$classMethod = $class->getMethod('lowerCase');
+//getting parameters of method
+$methodParametrs = $classMethod->getParameters();
+foreach ($methodParametrs as $parameter){
+    d(getMethodsParams($parameter));
 }
 
-//getting class methods source code
+//getting class
 $class = new ReflectionClass('Local\\DataBase');
-$classMethods = $class->getMethods();
-foreach ($classMethods as $method) {
-    //getting comment class method source code
-    d(getClassMethodDocComment($method));
-    d(getClassMethodsCode($method));
+//getting method
+$classMethod = $class->getMethod('setConfig');
+//getting parameters of method
+$methodParametrs = $classMethod->getParameters();
+foreach ($methodParametrs as $parameter){
+    d(getMethodsParams($parameter));
 }

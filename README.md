@@ -5,8 +5,8 @@ Exploring Reflection's classes and methods for understanding their capabilities.
 
 src/ - Classes, Interfaces, Treits for exploring by Reflection API<br>
 class/ - lessons, my practices  with Reflection API<br>
-&nbsp;&nbsp;&nbsp;&nbsp;1.php - Get infornmation about class<br>
-&nbsp;&nbsp;&nbsp;&nbsp;2.php - Check type of class and whether we can make instance of class
-&nbsp;&nbsp;&nbsp;&nbsp;3.php - Get source code of Class<br>
-&nbsp;&nbsp;&nbsp;&nbsp;4.php - Check type of class's methods<br>
-&nbsp;&nbsp;&nbsp;&nbsp;5.php - <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="class/1.php">1.php</a> - Get infornmation about class<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="class/2.php">2.php</a> - Check type of class and whether we can make instance of class<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="class/3.php">3.php</a> - Get source code of Class<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="class/4.php">4.php</a> - Check type of class's methods<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="class/5.php">5.php</a> - Get information about params of some methods<br>
