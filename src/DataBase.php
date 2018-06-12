@@ -12,8 +12,19 @@ namespace Local;
  * Class DataBase
  * @package Local
  */
-abstract class DataBase
+abstract class DataBase implements Cacheable
 {
     private $connection;
     private $config;
+
+    /** @var string */
+    private $key;
+
+    /**
+     * @return mixed
+     */
+    public function getKey(): string
+    {
+        return $this->key;
+    }
 }
