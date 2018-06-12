@@ -10,7 +10,12 @@ require_once dirname(__DIR__) . '/vendor/autoload.php';
 /**
  * Check type of class and can we make its instance
  */
-function getClassTypeInfo(ReflectionClass $class)
+
+/**
+ * @param ReflectionClass $class
+ * @return string
+ */
+function getClassTypeInfo(ReflectionClass $class): string
 {
     $className = $class->getName();
     $info = $className . "\n";
@@ -69,7 +74,7 @@ function getClassTypeInfo(ReflectionClass $class)
      */
     if ($class->isInstantiable()) {
         $info .= " - can create instance\n";
-    }else{
+    } else {
         $info .= " - can't create instance\n";
     }
 
@@ -91,10 +96,10 @@ foreach ($classList as $class) {
     $classWithNameSpase = 'Local\\' . $class;
     // getting reflection of class
     $class = new ReflectionClass($classWithNameSpase);
-    d(getClassTypeInfo($class));
+    d(getMethodTypeInfo($class));
 }
 
 // internal class example
 $class = new ReflectionClass('stdClass');
-d(getClassTypeInfo($class));
+d(getMethodTypeInfo($class));
 
