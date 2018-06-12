@@ -11,5 +11,8 @@ namespace Local;
 
 class MySql extends DataBase
 {
-
+    /** @var string */
+    public $version;
+    /** @var string  */
+    const NAME = 'MYSQL';
 }

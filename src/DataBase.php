@@ -15,4 +15,5 @@ namespace Local;
 abstract class DataBase
 {
     private $connection;
+    private $config;
 }
