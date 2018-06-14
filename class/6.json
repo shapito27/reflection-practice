@@ -1,0 +1,11 @@
+{
+  "Cache":  {
+    "Storage": "Redis"
+  },
+  "DataBase":  {
+    "database": "MySql"
+  },
+  "Session": {
+    "LifeTime": "172800"
+  }
+}

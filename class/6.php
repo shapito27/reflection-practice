@@ -10,3 +10,4 @@ require_once dirname(__DIR__) . '/vendor/autoload.php';
 /**
  * Modules runner. Modules DataBase, Cache, etc. Modules will be stored in xml file
  */
+$moduleRunner = new \Local\Module\ModuleRunner();

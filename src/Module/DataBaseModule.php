@@ -14,7 +14,7 @@ use Local\DataBase;
  * Class DataBaseModule
  * @package Local\Module
  */
-class DataBaseModule extends Module
+class DataBaseModule implements Module
 {
     /** @var DataBase */
     private $database;

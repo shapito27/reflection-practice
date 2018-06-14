@@ -12,7 +12,7 @@ namespace Local\Module;
  * Class SessionModule
  * @package Local\Module
  */
-class SessionModule
+class SessionModule implements Module
 {
     /** @var int */
     private $lifeTime;

@@ -13,7 +13,7 @@ namespace Local\Module;
  * Class Module
  * @package Local\Module
  */
-abstract class Module
+interface Module
 {
 
 }

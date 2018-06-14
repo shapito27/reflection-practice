@@ -12,7 +12,7 @@ namespace Local\Module;
  * Class CacheModule
  * @package Local\Module
  */
-class CacheModule
+class CacheModule implements Module
 {
     /** @var Storage */
     private $storage;
