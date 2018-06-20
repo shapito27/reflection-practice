@@ -13,6 +13,13 @@ class MySql extends DataBase
 {
     /** @var string */
     public $version;
+    /** @var string */
+    public $dataBaseName;
     /** @var string  */
     const NAME = 'MYSQL';
+
+    public function __construct(string $dataBaseName)
+    {
+        $this->dataBaseName = $dataBaseName;
+    }
 }

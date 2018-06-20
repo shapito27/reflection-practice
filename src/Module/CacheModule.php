@@ -8,6 +8,8 @@
 
 namespace Local\Module;
 
+use Local\Storage;
+
 /**
  * Class CacheModule
  * @package Local\Module
@@ -20,7 +22,7 @@ class CacheModule implements Module
     /**
      * @param mixed $storage
      */
-    public function setStorage(Storage $storage)
+    public function setStorage(string $storage)
     {
         $this->storage = $storage;
     }

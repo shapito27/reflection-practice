@@ -10,6 +10,6 @@ require_once dirname(__DIR__) . '/vendor/autoload.php';
 /**
  * Get infornmation about class
  */
-$mysql = new \Local\MySql();
+$mysql = new \Local\MySql('main_db');
 $class = new ReflectionClass($mysql);
-d(Reflection::export($class, true));
+db(Reflection::export($class, true));

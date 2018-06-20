@@ -42,8 +42,8 @@ function getClassDocComment(ReflectionClass $class): string
 //getting class source code
 $class = new ReflectionClass('Local\\DataBase');
 $classSourceCode = getClassCode($class);
-d($classSourceCode);
+db($classSourceCode);
 
 // getting class doc comment
 $classComments = getClassDocComment($class);
-d($classComments);
+db($classComments);

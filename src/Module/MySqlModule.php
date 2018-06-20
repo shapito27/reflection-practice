@@ -8,21 +8,17 @@
 
 namespace Local\Module;
 
-use Local\DataBase;
+use Local\MySql;
 
 /**
  * Class DataBaseModule
  * @package Local\Module
  */
-class DataBaseModule implements Module
+class MySqlModule implements Module
 {
-    /** @var DataBase */
     private $database;
 
-    /**
-     * @param DataBase $database
-     */
-    public function setDatabase(DataBase $database)
+    public function setDatabase(MySql $database)
     {
         $this->database = $database;
     }

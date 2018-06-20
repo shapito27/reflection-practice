@@ -8,8 +8,14 @@
 
 namespace Local;
 
-
+/**
+ * Interface Cacheable
+ * @package Local
+ */
 interface Cacheable
 {
+    /**
+     * @return mixed
+     */
     public function getKey();
 }

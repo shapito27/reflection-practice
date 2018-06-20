@@ -17,3 +17,11 @@ if(!function_exists('dd')){
         d($var);
     }
 }
+if(!function_exists('db')){
+    function db($var = null, $tittle = null){
+        print_r($tittle);
+        print_r('<pre>');
+        var_dump($var);
+        print_r('</pre>');
+    }
+}

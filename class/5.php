@@ -48,7 +48,7 @@ $classMethod = $class->getMethod('lowerCase');
 //getting parameters of method
 $methodParametrs = $classMethod->getParameters();
 foreach ($methodParametrs as $parameter){
-    d(getMethodsParams($parameter));
+    db(getMethodsParams($parameter));
 }
 
 //getting class
@@ -58,5 +58,5 @@ $classMethod = $class->getMethod('setConfig');
 //getting parameters of method
 $methodParametrs = $classMethod->getParameters();
 foreach ($methodParametrs as $parameter){
-    d(getMethodsParams($parameter));
+    db(getMethodsParams($parameter));
 }

@@ -12,3 +12,4 @@ require_once dirname(__DIR__) . '/vendor/autoload.php';
  */
 $moduleRunner = new \Local\Module\ModuleRunner();
 $moduleRunner->init();
+$moduleRunner->execute();

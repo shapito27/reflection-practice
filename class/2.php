@@ -96,10 +96,10 @@ foreach ($classList as $class) {
     $classWithNameSpase = 'Local\\' . $class;
     // getting reflection of class
     $class = new ReflectionClass($classWithNameSpase);
-    d(getMethodTypeInfo($class));
+    d(getClassTypeInfo($class));
 }
 
 // internal class example
 $class = new ReflectionClass('stdClass');
-d(getMethodTypeInfo($class));
+d(getClassTypeInfo($class));
 

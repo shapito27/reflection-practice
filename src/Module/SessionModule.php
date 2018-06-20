@@ -20,7 +20,7 @@ class SessionModule implements Module
     /**
      * @param int $lifeTime
      */
-    private function setLifeTime(int $lifeTime){
+    public function setLifeTime(int $lifeTime){
         if($lifeTime<=0){
             throw new \UnexpectedValueException('Wrong value of session life time');
         }

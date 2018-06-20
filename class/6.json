@@ -2,10 +2,10 @@
   "Cache":  {
     "Storage": "Redis"
   },
-  "DataBase":  {
-    "Database": "MySql"
+  "MySql":  {
+    "Database": "shop_bd"
   },
   "Session": {
-    "LifeTime": "172800"
+    "LifeTime": 172800
   }
 }
