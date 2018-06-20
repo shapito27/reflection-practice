@@ -10,3 +10,4 @@ class/ - lessons, my practices  with Reflection API<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="class/3.php">3.php</a> - Get source code of Class<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="class/4.php">4.php</a> - Check type of class's methods<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="class/5.php">5.php</a> - Get information about params of some methods<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="class/6.php">6.php</a> - Read json config with modules and their params . Load these modules with params.<br>
